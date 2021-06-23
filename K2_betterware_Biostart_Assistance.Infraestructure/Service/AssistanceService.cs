@@ -1,5 +1,5 @@
 ﻿using K2_betterware_Biostart_Assistance.Core.DTOs;
-using K2_betterware_Biostart_Assistance.Infrastructure.ExternaService;
+//using K2_betterware_Biostart_Assistance.Infrastructure.ExternaService;
 using System;
 using System.Collections.Generic;
 using System.Net;
@@ -18,97 +18,7 @@ namespace K2_betterware_Biostart_Assistance.Infrastructure.Service
     public class AssistanceService
     {
 
-        /*public string getToken()
-        {
-            string srcv = "https://api.workbeat.com/oauth/token";
-            string meth = "POST";
-            string usr_access = "grant_type=client_credentials&client_id=7E800F92-B08E-4A12-9C5C-EFB03E170301&client_secret=4088828B-9601-400F-BDDC-EA73818BA4C4";
-            ////////////////////////////////////////////////////////////////////////////////
-            string cont_type = "application/x-www-form-urlencoded";
-            string respuesta_tok = WorkBeatConnection.posting(srcv, usr_access, meth, cont_type);
-            //////////////////////////////// descerializando cadenas json /////////////////////////////////
-            Token from_js = JsonSerializer.Deserialize<Token>(respuesta_tok);
-            Console.WriteLine(from_js.access_token);
-            ////////////////////////////////////////////////////////////////////////////////////////////////
-            return from_js.access_token;
-        }
-
-
-        public string giveme_workbeat_generic(string servapi)
-        {
-            string usr_access = getToken();
-
-            var myRequest = (HttpWebRequest)WebRequest.Create("https://api.workbeat.com" + servapi + "?access_token=" + getToken());
-            myRequest.Method = "GET";
-            WebResponse response = myRequest.GetResponse();
-            Stream strReader = response.GetResponseStream();
-            StreamReader objReader = new StreamReader(strReader);
-            string responseBody = objReader.ReadToEnd();
-            return responseBody;
-        }
-
-
-        public string giveme_workbeat_empleados(string servapi)
-        {
-
-            string usr_access = getToken();
-            var myRequest = (HttpWebRequest)WebRequest.Create("https://api.workbeat.com" + servapi + "?access_token=" + getToken());
-            myRequest.Method = "GET";
-            WebResponse response = myRequest.GetResponse();
-            Stream strReader = response.GetResponseStream();
-            StreamReader objReader = new StreamReader(strReader);
-            string responseBody = objReader.ReadToEnd();
-            return responseBody;
-        }
-
-
-        public string giveme_workbeat_persona(string servapi, string npr)
-        {
-            string usr_access = getToken();
-            var myRequest = (HttpWebRequest)WebRequest.Create("https://api.workbeat.com" + servapi + npr + "?access_token=" + getToken());
-            myRequest.Method = "GET";
-            WebResponse response = myRequest.GetResponse();
-            Stream strReader = response.GetResponseStream();
-            StreamReader objReader = new StreamReader(strReader);
-            string responseBody = objReader.ReadToEnd();
-            return responseBody;
-        }
-
-        public string Checando(string p_id, string fechahora, string dispositivoId, string posi)
-        {
-            string token = getToken();
-            //string direccion = "https: //api.workbeat.com/v2/asi/checada?id=8251&fechahora=2019-11-05T09:04:08&dispositivoId=11948&dirección=[E|1|N]";
-            string direccion = "https://api.workbeat.com/v2/asi/checada?id=" + p_id + "&fechahora=" + fechahora + "&dispositivoId=" + dispositivoId + "&dirección=" + posi;
-            string responseBody = "nada";
-            var url = direccion;
-            var request = (HttpWebRequest)WebRequest.Create(url);
-            request.Method = "POST";
-            request.ContentType = "application/json";
-            request.Headers.Add("Authorization", "Bearer " + token);
-            request.Headers.Add("Accept", "application/json");
-            try
-            {
-                using (WebResponse response = request.GetResponse())
-                {
-                    using (Stream strReader = response.GetResponseStream())
-                    {
-                        if (strReader == null) ;
-                        using (StreamReader objReader = new StreamReader(strReader))
-                        {
-                            responseBody = objReader.ReadToEnd();
-                            // Do something with responseBody
-                            Console.WriteLine(responseBody);
-                        }
-                    }
-                }
-            }
-            catch (WebException ex)
-            {
-                Console.WriteLine(ex);
-                responseBody = ex.ToString();
-            }
-            return responseBody;
-        }*/
+        
 
         ////////////////////////////// metodos biostar /////////////////////////////////////////////////////////////
         public string token_bio()
@@ -224,41 +134,7 @@ namespace K2_betterware_Biostart_Assistance.Infrastructure.Service
         }
 
 
-        /*public string Checando_tok(string p_id, string fechahora, string dispositivoId, string posi, string tk_beat)
-        {
-            //string token = giveme_tok();
-            //string direccion = "https: //api.workbeat.com/v2/asi/checada?id=8251&fechahora=2019-11-05T09:04:08&dispositivoId=11948&dirección=[E|1|N]";
-            string direccion = "https: //api.workbeat.com/v2/asi/checada?id=" + p_id + "&fechahora=" + fechahora + "&dispositivoId=" + dispositivoId + "&dirección=" + posi;
-            string responseBody = "nada";
-            var url = direccion;
-            var request = (HttpWebRequest)WebRequest.Create(url);
-            request.Method = "POST";
-            request.ContentType = "application/json";
-            request.Headers.Add("Authorization", "Bearer " + tk_beat);
-            request.Headers.Add("Accept", "application/json");
-            try
-            {
-                using (WebResponse response = request.GetResponse())
-                {
-                    using (Stream strReader = response.GetResponseStream())
-                    {
-                        if (strReader == null) ;
-                        using (StreamReader objReader = new StreamReader(strReader))
-                        {
-                            responseBody = objReader.ReadToEnd();
-                            // Do something with responseBody
-                            Console.WriteLine(responseBody);
-                        }
-                    }
-                }
-            }
-            catch (WebException ex)
-            {
-                Console.WriteLine(ex);
-                responseBody = ex.ToString();
-            }
-            return responseBody;
-        }*/
+       
 
         public string[] bio_event_search(string tk_bio) //Tuple<string, string> bio_event_search() 
         {
@@ -334,65 +210,7 @@ namespace K2_betterware_Biostart_Assistance.Infrastructure.Service
         }
 
 
-        /// <summary>
-        /// componente de registro desde Biostar a workBeat
-        /// </summary>
-        /*public string[] registrando_bio_beat()
-        {
-            string to_check = " ";
-            string reponse = " ";
-            string tok_bio = token_bio();
-            string tok_beat = getToken();
-            //"2021-06-17T17:13:30Z"/"542194755"/"COMEDOR 2 BARRA MEXICANA"/"1794(MARTINEZ HERRERA ARTURO)"
-            string[] data_check = bio_event_search(tok_bio);
-
-            string[] salida = new string[data_check.Length];
-            //string[] salida = new string[data_check.Length];
-
-            if (data_check.Length == 0)
-            {
-                string p_id1 = "8251";
-                string fechahora = "2019-11-05T09:04:08";
-                string dispositivoId = "11948";
-                string posi = "[E|1|N]";
-                salida[0] = Checando_tok(p_id1, fechahora, dispositivoId, posi, tok_beat);
-            }
-            else
-            {
-
-                for (int i_ch = 0; i_ch < data_check.Length; i_ch++)
-                {
-                    to_check = data_check[i_ch];
-                    string[] to_check_words = to_check.Split('/');
-                    string[] p_idin = to_check_words[3].Split('"');
-
-                    //string to_fix = to_check_words[0].ToString().Split('"')[1];
-                    string ppp = to_check_words[0].ToString().Split('"')[1].Split('Z')[0];
-
-                    // test
-                    //53462021-06-17T18:54:25542194757[E|1|N]
-                    //82512019-11-05T09:04:0811948[E|1|N]
-
-                    string p_id = "8251";
-                    string fechahora = "2019-11-05T09:04:08";
-                    string dispositivoId = "11948";
-                    string posi = "[E|1|N]";
-
-                    //string p_id = p_idin[1].Split('(')[0];
-                    //string fechahora = ppp;
-                    //string dispositivoId = to_check_words[1].ToString().Split('"')[1];
-                    //string posi = to_check_words[2].ToString().Split('"')[1]; //"[E|1|N]";
-
-                    //salida[i_ch] = "Dato Biostar rechazado:_" + p_i + fecha + dispositivo + pos + "________________Dato en Workbeat aceptado:_" + p_id1 + fechahora + dispositivoId + posi;// to_fix;//p_id[1].Split('(')[0];
-                    //salida[i_ch] = p_id1 + fechahora + dispositivoId + "[E|1|N]";// to_fix;//p_id[1].Split('(')[0];
-
-                    //salida[i_ch] = Checando(p_id1,fechahora,dispositivoId,posi,tok_beat);   ////////////// datos Aceptados /////////////
-                    salida[i_ch] = Checando_tok(p_id, fechahora, dispositivoId, posi, tok_beat);
-                }
-            }
-            //Array.Copy(respuestas, 0, salida, 0, ct - 1);
-            return salida;
-        }*/
+        
 
 
     }

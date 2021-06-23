@@ -27,17 +27,6 @@ namespace K2_betterware_Biostart_Assistance.Core.DTOs
         }
     }
 
-
-    /*public class Assistance
-    {
-        public int IDEmpleado { get; set; }
-        public int Fecha { get; set; }
-        public int Hora { get; set; }
-        public int DispositivoId { get; set; }
-        public int DireccionE { get; set; }
-        public int DireccionS { get; set; }
-    }*/
-
     public class Data_event
     {
         public class raiz_data

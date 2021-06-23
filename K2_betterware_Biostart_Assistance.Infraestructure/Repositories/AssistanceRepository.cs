@@ -11,66 +11,7 @@ namespace K2_betterware_Biostart_Assistance.Infrastructure.Repositories
 {
     public class AssistanceRepository : IRepository
     {
-       // public async Task<IEnumerable<Assistance>> GetAssistance()
-       //{
-            //var assistance = Enumerable.Range(1, 10).Select(x => new Assistance
-            //{
-                //Hour = x
-            //}
-            //);
-
-            //await Task.Delay(10);
-            //return assistance;
-        //}
-
-
-        //public async Task<Boolean> AssistanceRegister(Assistance assistance)
-        //{
-            //await Task.Delay(10);
-            //return true;
-        //}
-
-
-        //public string getToken()
-        //{
-            //AssistanceService assistanceService = new AssistanceService();
-            //String strResponse = assistanceService.getToken();
-            //return strResponse;
-        //}
-
-
-        //public string get_employed(string word)
-        //{
-            //AssistanceService assistanceService = new AssistanceService();
-
-            //String strResponse = assistanceService.giveme_workbeat_generic(word);
-
-            //return strResponse;
-        //}
-
-        //public string get_empleado(string word)
-        //{
-            //AssistanceService assistanceService = new AssistanceService();
-            //String strResponse = assistanceService.giveme_workbeat_empleados(word);  // servicio lista de empleados
-            //return strResponse;
-        //}
-
-        //public string get_persona(string word, string npr)
-        //{
-            //AssistanceService assistanceService = new AssistanceService();
-            //String strResponse = assistanceService.giveme_workbeat_persona(word, npr); // servicio y parametro persona
-            //return strResponse;
-        //}
-
-
-        //public string checando(string id, string fechora, string disid, string direccion)
-        //{
-            //AssistanceService assistanceService = new AssistanceService();
-
-            //String strResponse = assistanceService.Checando(id, fechora, disid, direccion); // servicio y parametro persona
-
-            //return strResponse;
-        //}
+       
 
         //////////////////////// metodos biostar ///////////////////////////////
         public string Token_bio()
@@ -102,12 +43,7 @@ namespace K2_betterware_Biostart_Assistance.Infrastructure.Repositories
         }
 
 
-        //public string Checando_tok(string id, string fechora, string disid, string direccion, string tk_beat)
-        //{
-        //    AssistanceService assistanceService = new AssistanceService();
-        //    String strResponse = assistanceService.Checando_tok(id, fechora, disid, direccion, tk_beat); // servicio y parametro persona
-        //    return strResponse;
-        //}
+        
 
         public string[] bio_event_search(string tk_bio)
         {
@@ -116,12 +52,7 @@ namespace K2_betterware_Biostart_Assistance.Infrastructure.Repositories
             return strResponse;
         }
 
-        //public string[] registrando_bio_beat()
-        //{
-        //    AssistanceService assistanceService = new AssistanceService();
-        //    String[] strResponse = assistanceService.registrando_bio_beat(); // servicio y parametro persona
-        //    return strResponse;
-        //}
+       
 
 
     }
