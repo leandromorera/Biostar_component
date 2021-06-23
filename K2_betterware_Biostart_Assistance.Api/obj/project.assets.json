@@ -94,11 +94,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Biostar\\K2_betterware_Biostart_Assistance\\K2_betterware_Biostart_Assistance.Api\\K2_betterware_Biostart_Assistance.Api.csproj",
+      "projectUniqueName": "C:\\Biostar\\K2_betterware_Biostart_Assistance\\Biostar_component\\K2_betterware_Biostart_Assistance.Api\\K2_betterware_Biostart_Assistance.Api.csproj",
       "projectName": "K2_betterware_Biostart_Assistance.Api",
-      "projectPath": "C:\\Biostar\\K2_betterware_Biostart_Assistance\\K2_betterware_Biostart_Assistance.Api\\K2_betterware_Biostart_Assistance.Api.csproj",
+      "projectPath": "C:\\Biostar\\K2_betterware_Biostart_Assistance\\Biostar_component\\K2_betterware_Biostart_Assistance.Api\\K2_betterware_Biostart_Assistance.Api.csproj",
       "packagesPath": "C:\\Users\\leomo\\.nuget\\packages\\",
-      "outputPath": "C:\\Biostar\\K2_betterware_Biostart_Assistance\\K2_betterware_Biostart_Assistance.Api\\obj\\",
+      "outputPath": "C:\\Biostar\\K2_betterware_Biostart_Assistance\\Biostar_component\\K2_betterware_Biostart_Assistance.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -121,11 +121,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Biostar\\K2_betterware_Biostart_Assistance\\K2_betterware_Biostart_Assistance.Core\\K2_betterware_Biostart_Assistance.Core.csproj": {
-              "projectPath": "C:\\Biostar\\K2_betterware_Biostart_Assistance\\K2_betterware_Biostart_Assistance.Core\\K2_betterware_Biostart_Assistance.Core.csproj"
+            "C:\\Biostar\\K2_betterware_Biostart_Assistance\\Biostar_component\\K2_betterware_Biostart_Assistance.Core\\K2_betterware_Biostart_Assistance.Core.csproj": {
+              "projectPath": "C:\\Biostar\\K2_betterware_Biostart_Assistance\\Biostar_component\\K2_betterware_Biostart_Assistance.Core\\K2_betterware_Biostart_Assistance.Core.csproj"
             },
-            "C:\\Biostar\\K2_betterware_Biostart_Assistance\\K2_betterware_Biostart_Assistance.Infraestructure\\K2_betterware_Biostart_Assistance.Infraestructure.csproj": {
-              "projectPath": "C:\\Biostar\\K2_betterware_Biostart_Assistance\\K2_betterware_Biostart_Assistance.Infraestructure\\K2_betterware_Biostart_Assistance.Infraestructure.csproj"
+            "C:\\Biostar\\K2_betterware_Biostart_Assistance\\Biostar_component\\K2_betterware_Biostart_Assistance.Infraestructure\\K2_betterware_Biostart_Assistance.Infraestructure.csproj": {
+              "projectPath": "C:\\Biostar\\K2_betterware_Biostart_Assistance\\Biostar_component\\K2_betterware_Biostart_Assistance.Infraestructure\\K2_betterware_Biostart_Assistance.Infraestructure.csproj"
             }
           }
         }

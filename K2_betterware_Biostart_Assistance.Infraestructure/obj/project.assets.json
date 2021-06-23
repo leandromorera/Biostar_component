@@ -74,11 +74,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Biostar\\K2_betterware_Biostart_Assistance\\K2_betterware_Biostart_Assistance.Infraestructure\\K2_betterware_Biostart_Assistance.Infraestructure.csproj",
+      "projectUniqueName": "C:\\Biostar\\K2_betterware_Biostart_Assistance\\Biostar_component\\K2_betterware_Biostart_Assistance.Infraestructure\\K2_betterware_Biostart_Assistance.Infraestructure.csproj",
       "projectName": "K2_betterware_Biostart_Assistance.Infraestructure",
-      "projectPath": "C:\\Biostar\\K2_betterware_Biostart_Assistance\\K2_betterware_Biostart_Assistance.Infraestructure\\K2_betterware_Biostart_Assistance.Infraestructure.csproj",
+      "projectPath": "C:\\Biostar\\K2_betterware_Biostart_Assistance\\Biostar_component\\K2_betterware_Biostart_Assistance.Infraestructure\\K2_betterware_Biostart_Assistance.Infraestructure.csproj",
       "packagesPath": "C:\\Users\\leomo\\.nuget\\packages\\",
-      "outputPath": "C:\\Biostar\\K2_betterware_Biostart_Assistance\\K2_betterware_Biostart_Assistance.Infraestructure\\obj\\",
+      "outputPath": "C:\\Biostar\\K2_betterware_Biostart_Assistance\\Biostar_component\\K2_betterware_Biostart_Assistance.Infraestructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -101,8 +101,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Biostar\\K2_betterware_Biostart_Assistance\\K2_betterware_Biostart_Assistance.Core\\K2_betterware_Biostart_Assistance.Core.csproj": {
-              "projectPath": "C:\\Biostar\\K2_betterware_Biostart_Assistance\\K2_betterware_Biostart_Assistance.Core\\K2_betterware_Biostart_Assistance.Core.csproj"
+            "C:\\Biostar\\K2_betterware_Biostart_Assistance\\Biostar_component\\K2_betterware_Biostart_Assistance.Core\\K2_betterware_Biostart_Assistance.Core.csproj": {
+              "projectPath": "C:\\Biostar\\K2_betterware_Biostart_Assistance\\Biostar_component\\K2_betterware_Biostart_Assistance.Core\\K2_betterware_Biostart_Assistance.Core.csproj"
             }
           }
         }

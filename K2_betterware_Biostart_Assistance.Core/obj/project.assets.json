@@ -55,11 +55,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Biostar\\K2_betterware_Biostart_Assistance\\K2_betterware_Biostart_Assistance.Core\\K2_betterware_Biostart_Assistance.Core.csproj",
+      "projectUniqueName": "C:\\Biostar\\K2_betterware_Biostart_Assistance\\Biostar_component\\K2_betterware_Biostart_Assistance.Core\\K2_betterware_Biostart_Assistance.Core.csproj",
       "projectName": "K2_betterware_Biostart_Assistance.Core",
-      "projectPath": "C:\\Biostar\\K2_betterware_Biostart_Assistance\\K2_betterware_Biostart_Assistance.Core\\K2_betterware_Biostart_Assistance.Core.csproj",
+      "projectPath": "C:\\Biostar\\K2_betterware_Biostart_Assistance\\Biostar_component\\K2_betterware_Biostart_Assistance.Core\\K2_betterware_Biostart_Assistance.Core.csproj",
       "packagesPath": "C:\\Users\\leomo\\.nuget\\packages\\",
-      "outputPath": "C:\\Biostar\\K2_betterware_Biostart_Assistance\\K2_betterware_Biostart_Assistance.Core\\obj\\",
+      "outputPath": "C:\\Biostar\\K2_betterware_Biostart_Assistance\\Biostar_component\\K2_betterware_Biostart_Assistance.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

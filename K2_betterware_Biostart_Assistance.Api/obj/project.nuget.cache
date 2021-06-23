@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "A7IpLFFfjcOFw4i/GZtvYB3aOxdAYEqz1RzOn2HV01vwp+YhbQVgd5eMXWKkOpude4l7Z9bw2kaIuImn4UCu1g==",
+  "dgSpecHash": "DzGCWcC/JHq4lf0+ukGxWJmQkVsUI8EklRQtYCY9YXhfrEoRmgXtYPJgYQ9yCeKTTG7bfrTJmEXeixY7fnOb3A==",
   "success": true,
-  "projectFilePath": "C:\\Biostar\\K2_betterware_Biostart_Assistance\\K2_betterware_Biostart_Assistance.Api\\K2_betterware_Biostart_Assistance.Api.csproj",
+  "projectFilePath": "C:\\Biostar\\K2_betterware_Biostart_Assistance\\Biostar_component\\K2_betterware_Biostart_Assistance.Api\\K2_betterware_Biostart_Assistance.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\leomo\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],

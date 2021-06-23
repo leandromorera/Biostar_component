@@ -17,8 +17,25 @@ namespace K2_betterware_Biostart_Assistance.Infrastructure.Service
 {
     public class AssistanceService
     {
+        public string config_biostart()
+        {
+            
 
-        
+            /////////// credenciales biostar /////////////////////////////////////
+            string url_bio = "http://10.10.26.55:443/api/login";
+            string usr_bio = "consultas";
+            string id_bio = "Consulta1#";
+
+            /////////// metodos ///////////////////////////////////////////////
+            string usr = "http://10.10.26.55:443/api/users?group_id=1&limit=1&offset=1&order_by=user_id%3Afalse&userId=1&last_modified=10009";
+            string serch = "http://10.10.26.55:443/api/events/search";
+            string dev = "http://10.10.26.55:443/api/devices?monitoring_permission=false";
+            string ev = "http://10.10.26.55:443/api/events/search";
+
+
+            return url_bio + '*' + usr_bio + '*' + id_bio + '*' + usr + '*' + serch + '*' + dev + '*' + ev;
+        }
+
 
         ////////////////////////////// metodos biostar /////////////////////////////////////////////////////////////
         public string token_bio()
@@ -27,7 +44,12 @@ namespace K2_betterware_Biostart_Assistance.Infrastructure.Service
             string vv = "nada";
             string v2 = "nada";
 
-            string url = "http://10.10.26.55:443/api/login";
+            string url = config_biostart().Split('*')[0];
+            string usr = config_biostart().ToString().Split('*')[1];
+            string id = config_biostart().ToString().Split('*')[2];
+
+
+        //  string url = "http://10.10.26.55:443/api/login";
             var request = (HttpWebRequest)WebRequest.Create(url);
             request.Method = "POST";
             request.ContentType = "application/json";
@@ -35,7 +57,8 @@ namespace K2_betterware_Biostart_Assistance.Infrastructure.Service
 
             using (var streamWriter = new StreamWriter(request.GetRequestStream()))
             {
-                string jsonb = "{\"User\":{\"login_id\":\"consultas\",\"password\":\"Consulta1#\"}}";
+            //  string jsonb = "{\"User\":{\"login_id\":\"consultas\",\"password\":\"Consulta1#\"}}";
+                string jsonb = "{\"User\":{\"login_id\":\"" + usr + "\",\"password\":\"" + id + "\"}}";
                 streamWriter.Write(jsonb);
             }
             try
@@ -64,7 +87,9 @@ namespace K2_betterware_Biostart_Assistance.Infrastructure.Service
 
         public string user_bio()
         {
-            string url = "http://10.10.26.55:443/api/users?group_id=1&limit=1&offset=1&order_by=user_id%3Afalse&userId=1&last_modified=10009";
+
+            string url = config_biostart().Split('*')[3];
+            // string url = "http://10.10.26.55:443/api/users?group_id=1&limit=1&offset=1&order_by=user_id%3Afalse&userId=1&last_modified=10009";
             var myRequest = (HttpWebRequest)WebRequest.Create(url);
             myRequest.Method = "GET";
             myRequest.Headers.Add("bs-session-id", token_bio());
@@ -79,7 +104,9 @@ namespace K2_betterware_Biostart_Assistance.Infrastructure.Service
         {
             string responseBody = "nada";
             string vv = "nada";
-            string url = "http://10.10.26.55:443/api/events/search";
+
+            string url = config_biostart().Split('*')[4];
+         // string url = "http://10.10.26.55:443/api/events/search";
             var request = (HttpWebRequest)WebRequest.Create(url);
             request.Method = "POST";
             request.Headers.Add("bs-session-id", token_bio());
@@ -120,7 +147,9 @@ namespace K2_betterware_Biostart_Assistance.Infrastructure.Service
         {
             string responseBody = "nada";
             string vv = "nada";
-            string url = "http://10.10.26.55:443/api/devices?monitoring_permission=false";
+
+            string url = config_biostart().Split('*')[5];
+         // string url = "http://10.10.26.55:443/api/devices?monitoring_permission=false";
             var request = (HttpWebRequest)WebRequest.Create(url);
             request.Method = "GET";
             request.Headers.Add("bs-session-id", token_bio());
@@ -141,7 +170,9 @@ namespace K2_betterware_Biostart_Assistance.Infrastructure.Service
             string responseBody = "nada";
             string vv = "nada";
             string cadena = "nada";
-            string url = "http://10.10.26.55:443/api/events/search";
+
+            string url = config_biostart().Split('*')[6];
+         // string url = "http://10.10.26.55:443/api/events/search";
             var request = (HttpWebRequest)WebRequest.Create(url);
             request.Method = "POST";
 
