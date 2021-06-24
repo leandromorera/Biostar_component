@@ -32,7 +32,7 @@ namespace K2_betterware_Biostart_Assistance.Api.Controllers
 
             if (f_ini == null || f_nal == null || limit == null || type == null) 
             {
-                orchesting = "Error;  debe ingresar fecha de inicio, fecha final, limite de registros y tipo de registro por ejemplo: https://localhost:44354/api/Assistance?df27f4c5b655409bb94c471e5c314aba&f_ini=\"2021-06-20T10:26:57\"&f_nal=\"2021-06-20T20:26:57\"&limit=\"51\"&type=\"4867\"";
+                orchesting = "Error;  debe ingresar fecha de inicio, fecha final, limite de registros y tipo de registro por ejemplo: https://localhost:44354/api/Assistance?df27f4c5b655409bb94c471e5c314aba&f_ini=2021-06-20T10:26:57&f_nal=2021-06-20T20:26:57&limit=51&type=4867";
 
             }
 
