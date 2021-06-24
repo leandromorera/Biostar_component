@@ -25,25 +25,32 @@ namespace K2_betterware_Biostart_Assistance.Api.Controllers
 
 
         [HttpGet]
-        // public IActionResult GetAssistance()
-        public async Task<string[]> GetAssistance()
+        public IActionResult GetAssistance(string f_ini, string f_nal, string limit, string type)
+        //public async Task<string[]> GetAssistance(string f_ini, string f_nal, string limit, string type)
         {
-            
+            dynamic orchesting;
 
-            /////////////////////////////////////////////////////////////////////////////////////////
-            /////////////////////////////// métodos Biostar /////////////////////////////////////////
-            var tk_bio = _repository.Token_bio();
-            var Usr_bio = _repository.User_bio();
-            var Ev_bio = _repository.Event_search_bio();
-            var Dev_bio = _repository.Device_bio();
-            var Comp_bio = _repository.bio_event_search(tk_bio.ToString());
-            //////////////////////////////////////////////////////////////////////////////////////////
-            
+            if (f_ini == null || f_nal == null || limit == null || type == null) 
+            {
+                orchesting = "Error;  debe ingresar fecha de inicio, fecha final, limite de registros y tipo de registro por ejemplo: https://localhost:44354/api/Assistance?df27f4c5b655409bb94c471e5c314aba&f_ini=\"2021-06-20T10:26:57\"&f_nal=\"2021-06-20T20:26:57\"&limit=\"51\"&type=\"4867\"";
+
+            }
+
+            else
+            {
+                string jsonb = "{\"Query\":{\"limit\":" + limit + ",\"conditions\":[{\"column\":\"datetime\",\"operator\":3,\"values\":[\"" + f_ini + ".00Z\",\"" + f_nal + ".00Z\"]},{\"column\":\"event_type_id.code\",\"operator\":0,\"values\":[\"" + type + "\"],\"descending\":true}]}}";
+
+                /////////////////////////////////////////////////////////////////////////////////////////
+                /////////////////////////////// métodos Biostar /////////////////////////////////////////
+                var tk_bio = _repository.Token_bio();
+                orchesting = _repository.bio_event_search(tk_bio.ToString(), jsonb);
+                //////////////////////////////////////////////////////////////////////////////////////////
+            }
 
 
             //return Ok(assistance+"WWWWWWWWWWWWWWWWWWWW_"+ emp_resp_empl+"WWWWWWWWWWWWWWWWWWWWW_"+ emp_resp_per+"WWWWWWWWWWWWWWWWWWWW_"+response_check);
             //return Ok("BBBBBBBBBBBBBBBBBBB_" + tk_bio + "BBBBBBBBBBBBBBBB_"+ Usr_bio + "BBBBBBBBBBBBBBB_"+ Ev_bio + "BBBBBBBBBBBBBBBBBBB_"+ Dev_bio);
-            return Comp_bio;
+            return Ok(orchesting);
         }
     }
 }

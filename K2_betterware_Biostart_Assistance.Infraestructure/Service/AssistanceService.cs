@@ -165,7 +165,7 @@ namespace K2_betterware_Biostart_Assistance.Infrastructure.Service
 
        
 
-        public string[] bio_event_search(string tk_bio) //Tuple<string, string> bio_event_search() 
+        public string[] bio_event_search(string tk_bio, string jsonb) //Tuple<string, string> bio_event_search() 
         {
             string responseBody = "nada";
             string vv = "nada";
@@ -187,7 +187,7 @@ namespace K2_betterware_Biostart_Assistance.Infrastructure.Service
             using (var streamWriter = new StreamWriter(request.GetRequestStream()))
             {
                 //string jsonb = "{\"Query\":{\"limit\":51,\"conditions\":[{\"column\":\"datetime\",\"operator\":1,\"values\":[\"2019-07-30T15:00:00.000Z\"]}],\"orders\":[{\"column\":\"datetime\",\"descending\":false}]}}";
-                string jsonb = "{\"Query\":{\"limit\":51,\"orders\":[{\"column\":\"datetime\",\"descending\":true}]}}";
+                //string jsonb = "{\"Query\":{\"limit\":200,\"orders\":[{\"column\":\"datetime\",\"descending\":true}]}}";
                 streamWriter.Write(jsonb);
             }
             try

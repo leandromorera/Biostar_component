@@ -14,7 +14,7 @@ namespace K2_betterware_Biostart_Assistance.Core.Interfases
         string User_bio();
         string Event_search_bio();
         string Device_bio();
-        string[] bio_event_search(string tk_bio);
+        string[] bio_event_search(string tk_bio, string jsonb);
         
 
     }

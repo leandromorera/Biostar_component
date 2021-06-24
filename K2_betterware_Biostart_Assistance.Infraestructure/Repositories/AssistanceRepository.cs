@@ -45,10 +45,10 @@ namespace K2_betterware_Biostart_Assistance.Infrastructure.Repositories
 
         
 
-        public string[] bio_event_search(string tk_bio)
+        public string[] bio_event_search(string tk_bio, string jsonb)
         {
             AssistanceService assistanceService = new AssistanceService();
-            String[] strResponse = assistanceService.bio_event_search(tk_bio); // servicio y parametro persona
+            String[] strResponse = assistanceService.bio_event_search(tk_bio, jsonb); // servicio y parametro persona
             return strResponse;
         }
 
